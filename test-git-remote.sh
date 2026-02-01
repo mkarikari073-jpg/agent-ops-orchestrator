@@ -61,8 +61,7 @@ echo ""
 # Test 4: Script validates different URL formats
 print_test "Testing URL validation (HTTPS URL format check)"
 SCRIPT_PATH="$(pwd)/setup-git-remote.sh"
-TEST_DIR="/tmp/git-test-$$"
-mkdir -p "$TEST_DIR"
+TEST_DIR=$(mktemp -d)
 cd "$TEST_DIR"
 git init -q
 git config user.name "Test User"

@@ -76,7 +76,7 @@ echo ""
 
 # Step 2: Ensure branch name is main
 print_info "Step 2: Ensuring branch name is 'main'"
-CURRENT_BRANCH=$(git branch --show-current)
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ "$CURRENT_BRANCH" != "main" ]; then
     print_warning "Current branch is '$CURRENT_BRANCH'. Renaming to 'main'..."
     git branch -M main
@@ -102,5 +102,5 @@ git remote -v
 echo ""
 
 print_info "Git remote setup completed successfully!"
-print_info "Current branch: $(git branch --show-current)"
+print_info "Current branch: $(git rev-parse --abbrev-ref HEAD)"
 print_info "Upstream: $(git rev-parse --abbrev-ref @{upstream} 2>/dev/null || echo 'Not set')"
