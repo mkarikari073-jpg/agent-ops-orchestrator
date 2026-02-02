@@ -1,0 +1,33 @@
+# Core web / API
+fastapi>=0.95
+uvicorn[standard]>=0.22
+
+# HTTP / async clients
+httpx>=0.24
+aiohttp>=3.9
+
+# Data / DB
+SQLAlchemy>=1.4
+alembic>=1.11
+psycopg2-binary>=2.9
+
+# Queue / caching
+redis>=4.6
+celery>=5.3
+
+# Environment & logging
+python-dotenv>=1.0
+loguru>=0.7
+rich>=13.0
+
+# LLM / embeddings (optional)
+openai>=0.27
+langchain>=0.0.300
+transformers>=4.35
+tiktoken>=0.4
+faiss-cpu>=1.7
+
+# Dev / testing tools
+pytest>=7.3
+black>=23.9
+isort>=5.12
